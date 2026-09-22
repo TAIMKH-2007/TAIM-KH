@@ -1,0 +1,228 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 250%;
+     font-family: Impact;
+     padding-top: 71px;
+     margin: 0;
+     overflow-x: hidden;
+    
+    }
+.wq{
+    background-color:rgb(0, 153, 176);
+    color: white;
+    text-align: right;
+    font-weight: 800;
+    font-family:'cairo';
+    margin: -35px -8px -10px -30px;
+}
+img{
+
+    border: 1px solid rgb(0, 149, 255);
+    border-radius: 12%;
+    float: right;
+}
+.w {
+   
+    padding: 12px 28px;        
+    font-size: 20px;           
+    font-weight: bold;
+    background-color: #01bac4; 
+    color: #ffffff;            
+    border: none;              
+    border-radius: 8px;      
+    text-decoration: none;  
+    cursor: pointer;           
+    transition: all 0.6s ease; 
+    display:inline-block ;
+    margin: 15px;
+}
+#home,
+#head,
+#ane,
+#sub-n,
+#me-i {
+    scroll-margin-top: 85px; /* قيمة تعادل ارتفاع الـ Navbar وتترك مسافة مريحة */
+}
+
+.w:hover {
+    background-color: #00888e;
+    transform: translatey(-6px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+}
+.q{
+   margin:10px 450px 1px 100px;
+}
+.ss{
+    padding: 0px;
+    margin: 0px;
+    font-size: 130%;
+    display: inline;
+
+}
+.vv{
+    padding: 0px;
+    margin: 4px 4px 4px 0px ;
+    float: right;
+    color:rgb(81, 81, 81);
+    font-size: 98%;
+    font-weight: 500;
+    transition: all 0.6s ease; 
+}
+.vv:hover{
+     background-color: aqua;
+     cursor:pointer;
+     color: black;
+     transform: translatey(6px);
+
+}
+.na{
+    text-align: center;
+    color: rgb(78, 78, 78);
+    font-size: 80%;
+    font-weight: bold;
+    font-family: 'cairo';
+
+}
+.pp{
+    font-family:'cairo';
+    font-size: 90;
+    font-weight: 900;
+   text-align: center;
+   margin: 0;
+}
+.skills-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #dad9d9; /* لون خلفية خفيف ومريح */
+}
+/* استخدام Flexbox لترتيب البطاقات بجانب بعضها وتنزيلها للأسفل تلقائياً لو الشاشة صغرت */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* المسافة بين البطاقات */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* تصميم البطاقة الواحدة */
+.skill-card {
+    background: #ffffff;
+    padding: 12px 24px;
+    border-radius: 15px; /* حواف دائرية ناعمة */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* ظل خفيف جداً */
+    font-weight: 500;
+    color: #2d3748;
+    border: 1px solid #e2e8f0; /* إطار رفيع وهادئ */
+    transition: all 0.3s ease; /* حركة ناعمة عند التفاعل */
+}
+
+/* تأثير جمالي عند مرور الماوس على البطاقة */
+.skill-card:hover {
+    transform: translateY(-3px); /* ترتفع البطاقة للأعلى قليلاً */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* يبرز الظل */
+    border-color: #cbd5e1;
+    cursor:pointer;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:8px 1px 10.5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    z-index: 1000;
+    background-color: rgb(255,255,255);
+}
+.msh{
+    text-align:center;
+    font-weight: 1000;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'cairo';
+    font-size: 110%;
+}
+.sub-card{
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 1000;
+    padding: 30px;
+    margin: 10px;
+    font-family: 'cairo';
+    font-size: 60%;
+}
+.sub-section{
+    text-align: center;
+    padding: 50px 30px;
+    background-color: #dad9d9;
+    width: 100%;
+}
+.bot{
+    background-color: #2d3748;
+    width: 120px;
+    height: 60px;
+    color: white;
+    font-family: 'cairo';
+    font-size: x-large;
+    font-weight: 800;
+    border: #2d3748;
+    border-radius: 20px;
+    padding: 2px 24px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    
+}
+.bot:hover
+{
+    cursor: pointer;
+    background-color: #13171e;
+    color: #01bac4;
+    transform: translateY(-4px);
+
+}
+.moo{
+    display: block;
+    width: 100%;
+    background-color: #0a0142;
+    text-align: center;
+    font-family: 'cairo';
+    font-weight: 600;
+    color: #01bac4;
+    font-size: 100%;
+    height: 500px;
+}
+.moo a{
+    padding: 0px 60px 0px 60px;
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(8, 201, 254);
+    font-size: xxx-large;
+
+}
+
+@media (max-width: 768px) {
+    .q {
+        margin: 20px auto;
+        float: none;
+        display: block;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .vv {
+        font-size: 70%;
+    }
+}
