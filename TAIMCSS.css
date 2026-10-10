@@ -12,14 +12,6 @@ body{
      overflow-x: hidden;
     
     }
-.wq{
-    background-color:rgb(0, 153, 176);
-    color: white;
-    text-align: right;
-    font-weight: 800;
-    font-family:'cairo';
-    margin: -35px -8px -10px -30px;
-}
 img{
 
     border: 1px solid rgb(0, 149, 255);
@@ -58,7 +50,7 @@ img{
    margin:10px 450px 1px 100px;
 }
 .ss{
-    padding: 0px;
+    padding: 0px 400px 0px 0px ;
     margin: 0px;
     font-size: 130%;
     display: inline;
@@ -97,7 +89,7 @@ img{
 }
 .skills-section {
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 20px  4px;
     background-color: #dad9d9; /* لون خلفية خفيف ومريح */
 }
 /* استخدام Flexbox لترتيب البطاقات بجانب بعضها وتنزيلها للأسفل تلقائياً لو الشاشة صغرت */
@@ -178,7 +170,7 @@ img{
     border: #2d3748;
     border-radius: 20px;
     padding: 2px 24px;
-    margin: 10px;
+    margin: 20px 10px 10px 10px;
     transition: all 0.3s ease;
     
 }
@@ -225,4 +217,108 @@ img{
     .vv {
         font-size: 70%;
     }
+}
+
+.wq {
+    
+    color: white;
+    text-align: right;
+    font-weight: 800;
+    font-family: 'Cairo', sans-serif;
+    padding: 10px; /* استخدام الـ padding أفضل بكثير من الـ margins السالبة */
+    margin: 0;     /* إزالة الـ margins السالبة لكي لا تخرج عن الشاشة */
+    box-sizing: border-box;
+}
+
+/* تنسيق الصورة لتكون مرنة على الهواتف */
+.wq img.q {
+    max-width: 100%; /* تمنع الصورة من تجاوز عرض الشاشة */
+    height: auto;
+    width: 250px;    /* حجم افتراضي مناسب للشاشات الكبيرة ويصغر تلقائياً */
+    display: block;
+    margin: 0 auto 2px auto; /* توسيط الصورة إذا رغبت أو اجعلها حسب محاذاة النص */
+}
+
+/* تحسين حجم الخطوط على الموبايل لتناسب الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .wq {
+        text-align: center; /* غالباً على الموبايل التوسط يبدو أفضل للشفت والـ Hero section */
+        padding: 15px;
+    }
+    
+    .wq span[style*="font-size: 25px"] {
+        font-size: 16px !important; /* تصغير الوصف الطويل على الموبايل ليقرأ بسهولة */
+        line-height: 1.6;
+    }
+}
+/* الحاوية الرئيسية لتوسيط القسم بالكامل ومنع امتداده الزائد */
+.wq-container {
+    background-color: rgb(0, 153, 176);
+    width: 100%;
+    margin: 0;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; 
+}
+
+
+.wq {
+    display: flex;
+    flex-direction: row-reverse; /* الصورة بجهة والنص بجهة */
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /* المسافة بين الصورة والنص */
+    max-width: 1000px; /* بيمنع القسم إنه يمط زيادة عن اللزوم على الشاشات الواسعة */
+    width: 100%;
+    color: white;
+    text-align: right;
+    font-weight: 800;
+    font-family: 'Cairo';
+}
+
+/* تنسيق الصورة */
+.wq img.q {
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* تنسيق النص */
+.wq p {
+    margin: 0;
+}
+
+/* تعديلات الهواتف والشاشات الصغيرة */
+@media (max-width: 768px) {
+    .wq {
+        flex-direction: column; /* الصورة فوق والنص تحتها */
+        text-align: center;     /* توسيط النص والصورة على الموبايل */
+        gap: 20px;
+    }
+    
+    .wq img.q {
+        width: 180px;
+    }
+
+    .wq span[style*="font-size"] {
+        font-size: 16px !important;
+        line-height: 1.6;
+    }
+}
+.pp11{
+    color: white;
+    background-color: #0a5357;
+    font-family: 'cairo';
+    font-size: xx-large;
+    font-weight: 900;
+    border: 1px solid black;
+    border-radius: 15px;
+    transition:all 0.3s ease ;
+}
+.pp11:hover{
+    background-color: #13171e;
+    transform: translateY(-6px);
+    
 }
