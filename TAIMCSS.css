@@ -51,7 +51,8 @@ img{
    margin:10px 450px 1px 100px;
 }
 .ss{
-    padding: 0px 400px 0px 0px ;
+    justify-self: start;
+    padding: 0px ;
     margin: 0px;
     font-size: 130%;
     display: inline;
@@ -127,10 +128,11 @@ img{
     top: 0;
     left: 0;
     width: 100%;
-    display:flex;
-    justify-content: space-between;
+    display:grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding:8px 1px 10.5px;
+    align-items: center;
+   padding: 8px 25px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.4);
     z-index: 1000;
     background-color: rgb(255,255,255);
@@ -211,16 +213,41 @@ img{
         display: block;
     }
     
+    /* إبقاء الناف بار أفقياً ومدمجاً حتى عند التكبير أو الشاشات الصغيرة */
     .navbar {
-        flex-direction: column;
-        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 12px;
+        flex-wrap: wrap; /* لكي يلتف بلطف لو ضاقت الشاشة تماماً */
+        gap: 5px;
     }
     
+    .ss {
+        font-size: 100%;
+        padding: 0;
+    }
+
+    /* تصغير حجم زر الدارك مود ليكون مناسباً ولا يتمدد */
+    .pp11 {
+        font-size: 12px; 
+        padding: 4px 10px;
+        border-radius: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
     .vv {
-        font-size: 70%;
+        font-size: 75%;
+        float: none;
+        margin: 0;
     }
 }
-
 .wq {
     
     color: white;
@@ -327,6 +354,6 @@ img{
 .skills-section, .sub-section, .moo {
     transition: background-color 0.4s ease, color 0.4s ease;
 }
-.vv, .wq, .na, .pp, .msh {
+.wq, .na, .pp, .msh {
     transition: color 0.4s ease;
 }
