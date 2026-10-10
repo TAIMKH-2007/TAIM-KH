@@ -10,6 +10,7 @@ body{
      padding-top: 71px;
      margin: 0;
      overflow-x: hidden;
+     transition: background-color 0.4s ease;
     
     }
 img{
@@ -133,6 +134,7 @@ img{
     box-shadow: 0 2px 5px rgba(0,0,0,0.4);
     z-index: 1000;
     background-color: rgb(255,255,255);
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 .msh{
     text-align:center;
@@ -321,4 +323,10 @@ img{
     background-color: #13171e;
     transform: translateY(-6px);
     
+}
+.skills-section, .sub-section, .moo {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+.vv, .wq, .na, .pp, .msh {
+    transition: color 0.4s ease;
 }
