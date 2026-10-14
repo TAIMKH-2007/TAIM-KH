@@ -6,63 +6,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script>
-     let isDark = false; // متغير لتتبع وضع الصفحة الحالي
+    let isDark = false;
 
-    function mooddark() {
-        const btn = document.getElementById('mode-btn');
+function mooddark() {
+    const checkbox = document.getElementById('checkbox');
+    const iconSpan = document.querySelector('.slider .icon');
 
-        if (!isDark) {
-            // === تطبيق الوضع الليلي (Dark Mode) ===
-            document.getElementById('nav').style.backgroundColor = "black";
-            document.getElementById('text').style.color = "white";
-            document.getElementById('tex').style.color = "white";
-            document.getElementById('te').style.color = "white";
-            document.getElementById('tt').style.color = "white";
-            document.getElementById('iiii').style.color = "white";
-            document.body.style.backgroundColor = "rgb(50,50,50)";
-            document.getElementById('p18').style.color = "rgb(0, 199, 199)";
-            document.getElementById('p119').style.backgroundColor = "rgb(20,20,20)";
-            document.getElementById('home').style.border = "red";
-            document.getElementById('body').style.color = "rgb(0,199,199)";
-            document.getElementById('p90').style.color = "white";
-            document.getElementById('Projects').style.color = "white";
-            document.getElementById('p00').style.color = "white";
-            document.getElementById('Contact').style.backgroundColor = "rgb(40,40,40)";
-            document.getElementById('pppo').style.backgroundColor = "rgb(50,50,50)";
-            document.getElementById('p0909').style.backgroundColor = "rgb(50,50,50)";
-            
-            btn.innerHTML = "Light Mode ☀️";
-            isDark = true;
-        } else {
-            // === الرجوع للوضع الأصلي (White / Light Mode) ===
-            document.getElementById('nav').style.backgroundColor = "";
-            document.getElementById('text').style.color = "";
-            document.getElementById('tex').style.color = "";
-            document.getElementById('te').style.color = "";
-            document.getElementById('tt').style.color = "";
-            document.getElementById('iiii').style.color = "";
-            document.body.style.backgroundColor = "";
-            document.getElementById('p18').style.color = "";
-            document.getElementById('p119').style.backgroundColor = "";
-            document.getElementById('home').style.border = "";
-            document.getElementById('body').style.color = "";
-            document.getElementById('p90').style.color = "";
-            document.getElementById('Projects').style.color = "";
-            document.getElementById('p00').style.color = "";
-            document.getElementById('Contact').style.backgroundColor = "";
-            document.getElementById('pppo').style.backgroundColor = "";
-            document.getElementById('p0909').style.backgroundColor = "";
+    if (checkbox.checked) {
+        // === الوضع الليلي (Dark Mode) ===
+        document.getElementById('nav').style.backgroundColor = "black";
+        document.getElementById('text').style.color = "white";
+        document.getElementById('tex').style.color = "white";
+        document.getElementById('te').style.color = "white";
+        document.getElementById('tt').style.color = "white";
+        document.getElementById('iiii').style.color = "white";
+        document.body.style.backgroundColor = "rgb(50,50,50)";
+        document.getElementById('p18').style.color = "rgb(0, 199, 199)";
+        document.getElementById('p119').style.backgroundColor = "rgb(20,20,20)";
+        document.getElementById('home').style.border = "red";
+        document.getElementById('body').style.color = "rgb(0,199,199)";
+        document.getElementById('p90').style.color = "white";
+        document.getElementById('Projects').style.color = "white";
+        document.getElementById('p00').style.color = "white";
+        document.getElementById('Contact').style.backgroundColor = "rgb(40,40,40)";
+        document.getElementById('pppo').style.backgroundColor = "rgb(50,50,50)";
+        document.getElementById('p0909').style.backgroundColor = "rgb(50,50,50)";
+        
+        iconSpan.innerHTML = "☀️";
+        isDark = true;
+    } else {
+        // === الوضع الأصلي (Light Mode) ===
+        document.getElementById('nav').style.backgroundColor = "";
+        document.getElementById('text').style.color = "";
+        document.getElementById('tex').style.color = "";
+        document.getElementById('te').style.color = "";
+        document.getElementById('tt').style.color = "";
+        document.getElementById('iiii').style.color = "";
+        document.body.style.backgroundColor = "";
+        document.getElementById('p18').style.color = "";
+        document.getElementById('p119').style.backgroundColor = "";
+        document.getElementById('home').style.border = "";
+        document.getElementById('body').style.color = "";
+        document.getElementById('p90').style.color = "";
+        document.getElementById('Projects').style.color = "";
+        document.getElementById('p00').style.color = "";
+        document.getElementById('Contact').style.backgroundColor = "";
+        document.getElementById('pppo').style.backgroundColor = "";
+        document.getElementById('p0909').style.backgroundColor = "";
 
-            btn.innerHTML = "Dark Mode 🌙";
-            isDark = false;
-        }
+        iconSpan.innerHTML = "🌙";
+        isDark = false;
+    }
+
     }
     </script>
   </head>
   <body>
     <header  class="navbar" id="nav">
        <p  class="ss" id="iiii"> Taim <span style="color: rgb(0, 199, 199);">Khalil</span></p>
-       <button class="pp11" id="mode-btn" onclick="mooddark()">  Dark Mode 🌙</button>
+       <div class="them-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" onclick="mooddark()" />
+          <div class="slider round">
+            <span class="icon">🌙</span>
+          </div>
+        </label>
+       </div>
        <div class="nav-links" >
          <a  href="#head" ><p class="vv" id="text">Home</p></a>
           <a  href="#body" ><p class="vv"id="tex">About Me&ensp;</p></a>

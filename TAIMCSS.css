@@ -207,45 +207,59 @@ img{
 }
 
 @media (max-width: 768px) {
-    .q {
-        margin: 20px auto;
-        float: none;
-        display: block;
-    }
-    
-    /* إبقاء الناف بار أفقياً ومدمجاً حتى عند التكبير أو الشاشات الصغيرة */
+    /* ضبط الناف بار ليكون سطر واحد أفقياً */
     .navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 6px 12px;
-        flex-wrap: wrap; /* لكي يلتف بلطف لو ضاقت الشاشة تماماً */
-        gap: 5px;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 5px 8px !important;
+        flex-wrap: nowrap !important; /* يمنع نزول أي عنصر لسطر جديد */
+        gap: 4px !important;
     }
     
+    /* تصغير اسم Taim Khalil على الموبايل */
     .ss {
-        font-size: 100%;
-        padding: 0;
+        font-size: 14px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
     }
 
-    /* تصغير حجم زر الدارك مود ليكون مناسباً ولا يتمدد */
-    .pp11 {
-        font-size: 12px; 
-        padding: 4px 10px;
-        border-radius: 10px;
+    /* تصغير زر الدارك مود ليتناسب مع الشاشة */
+    .theme-switch-wrapper {
+        margin: 0 !important;
     }
 
+    .theme-switch {
+        width: 50px !important;
+        height: 26px !important;
+    }
+
+    .slider .icon {
+        height: 20px !important;
+        width: 20px !important;
+        font-size: 12px !important;
+    }
+
+    input:checked + .slider .icon {
+        transform: translate(24px, -50%) !important;
+    }
+
+    /* ترتيب كلمات التنقل بجانب بعضها أفقياً وبخط مناسب */
     .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 6px !important;
+        white-space: nowrap !important;
     }
 
     .vv {
-        font-size: 75%;
-        float: none;
-        margin: 0;
+        font-size: 12px !important; /* حجم خط ممتاز للموبايل */
+        float: none !important;      /* إلغاء الـ float القديم */
+        margin: 0 !important;
+        padding: 2px 4px !important;
     }
 }
 .wq {
@@ -356,4 +370,68 @@ img{
 }
 .wq, .na, .pp, .msh {
     transition: color 0.4s ease;
+}
+/* تنسيق حاوية زر التبديل في الناف بار */
+.theme-switch-wrapper {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* تصميم الزر كشكل كبسولة */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 85px;
+    height: 42px;
+}
+
+/* إخفاء الـ checkbox الافتراضي */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* تصميم المسار (Track) للـ Toggle */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #0a5357;
+    transition: .4s;
+    border-radius: 40px;
+    border: 1.5px solid black;
+}
+
+/* الدائرة المتحركة بداخل الزر */
+.slider .icon {
+    position: absolute;
+    height: 33px;
+    width: 33px;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%); /* يضمن التوسيط العمودي 100% */
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    user-select: none;
+}
+
+/* عند تفعيل الـ Checkbox (الوضع الليلي) تتحرك الدائرة لليسار/اليمين وتتغير الخلفية */
+input:checked + .slider {
+    background-color: #13171e;
+}
+
+input:checked + .slider .icon {
+    transform: translate(40px, -50%);
+}
+
+.slider.round {
+    border-radius: 34px;
 }
