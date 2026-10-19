@@ -66,7 +66,7 @@ img{
  position: relative;
   text-decoration: none;
   transition: color 0.4s ease, transform 0.3s ease;
-  display: inline-block;
+  
 }
 .vv::after {
   content: '';
